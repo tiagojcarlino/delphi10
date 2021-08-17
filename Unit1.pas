@@ -8,6 +8,7 @@ uses
 
 type
   TForm1 = class(TForm)
+    procedure FormClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -20,5 +21,12 @@ var
 implementation
 
 {$R *.dfm}
+
+uses Unit2;
+
+procedure TForm1.FormClick(Sender: TObject);
+begin
+form2.show;
+end;
 
 end.
