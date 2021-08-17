@@ -8,8 +8,12 @@ uses
 
 type
   TForm1 = class(TForm)
+
+    procedure FormClick(Sender: TObject);
+
     Label1: TLabel;
     procedure Label1DblClick(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -23,9 +27,17 @@ implementation
 
 {$R *.dfm}
 
+
+uses Unit2;
+
+procedure TForm1.FormClick(Sender: TObject);
+begin
+form2.show;
+
 procedure TForm1.Label1DblClick(Sender: TObject);
 begin
 form1.Caption:='v0.1.0'       ;
+
 end;
 
 end.
