@@ -9,10 +9,10 @@ uses
 type
   TForm1 = class(TForm)
 
-    procedure FormClick(Sender: TObject);
-
     Label1: TLabel;
     procedure Label1DblClick(Sender: TObject);
+    procedure FormDblClick(Sender: TObject);
+    procedure FormClick(Sender: TObject);
 
   private
     { Private declarations }
@@ -28,11 +28,18 @@ implementation
 {$R *.dfm}
 
 
-uses Unit2;
+uses Unit2, Unit3;
+
 
 procedure TForm1.FormClick(Sender: TObject);
 begin
-form2.show;
+        form2.show;
+end;
+
+procedure TForm1.FormDblClick(Sender: TObject);
+begin
+ form3.show;
+end;
 
 procedure TForm1.Label1DblClick(Sender: TObject);
 begin
